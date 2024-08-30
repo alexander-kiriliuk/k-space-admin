@@ -1,0 +1,144 @@
+@import "./assets/styles/reset.css";
+@import "primeng/resources/primeng.min.css";
+@import "primeicons/primeicons.css";
+
+:root {
+  --header-bar-h: 7vh;
+  --logo-bar-h: 9vh;
+  --side-menu-w: 15vw;
+}
+body {
+  background: var(--neutral-a);
+  font-family: var(--font-family);
+
+  &.pending {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    &:after {
+      content: "";
+      display: block;
+      background-image: var(--logo-url);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      max-width: 80vw;
+      min-height: 100px;
+      min-width: 80%;
+      width: max-content;
+      height: max-content;
+      animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+      animation-direction: reverse;
+      animation-duration: 2500ms;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+}
+
+p-avatar > div {
+  position: relative;
+}
+
+input.p-inputtext-xs, span.p-inputtext-xs input {
+  padding: 0.75rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+table.p-datepicker-calendar {
+  thead th {
+    text-align: center;
+  }
+}
+
+.heading-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+
+  @media (max-width: 1280px) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  @media (max-width: 1025px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.heading-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+  @media (max-width: 1280px) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  @media (max-width: 1025px) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+p-paginator {
+  @media (max-width: 1025px) {
+    .p-paginator.p-component {
+      border-radius: 0 !important;
+
+      button {
+        --pe-w: 2.0rem;
+        width: var(--pe-w) !important;
+        height: var(--pe-w) !important;
+        min-width: var(--pe-w) !important;
+        min-height: var(--pe-w) !important;
+      }
+
+      .p-dropdown {
+        height: 2.3rem !important;
+
+        .p-element.p-dropdown-label.p-inputtext {
+          padding-top: 0.35rem !important;;
+        }
+      }
+    }
+  }
+}
+
+.dialog-mode {
+  .p-dialog-content {
+    padding: 0 !important;
+  }
+}
+
+.c-primary {
+  color: var(--primary-color)
+}
+
+.c-accent {
+  color: var(--accent-color)
+}
+
+.c-warn {
+  color: var(--warn-color)
+}
+
+.c-success {
+  color: var(--success-color)
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

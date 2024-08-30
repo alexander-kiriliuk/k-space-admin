@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  min-width: 300px;
+  min-height: 200px;
+
+  & > div {
+    display: flex;
+    gap: 1rem;
+    & > div {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+    }
+  }
+}
+.footer {
+  height: var(--sb-footer-h);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
